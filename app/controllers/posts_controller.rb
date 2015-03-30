@@ -1,7 +1,21 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    sleep 1
+    @posts = Post.page(params[:page]).per_page(15)
     render :index
+  end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to posts_path(@post)
+    else
+      render :new
+    end
   end
 
   def edit

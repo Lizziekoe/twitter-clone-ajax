@@ -1,0 +1,8 @@
+<div class="well"><p><%= post.content %></p>
+  <%= form_for post do |f| %>
+    <%= f.check_box :favorite %>
+    <%= f.submit "Favorite" %>
+  <% end %>
+
+  <%= post.favorite %>
+</div>

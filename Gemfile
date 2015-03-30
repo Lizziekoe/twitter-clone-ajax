@@ -7,6 +7,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'will_paginate'
 
 group :development do
   gem 'better_errors'
@@ -21,6 +22,7 @@ end
 group :test do
   gem 'capybara'
   gem 'shoulda-matchers'
+  gem 'poltergeist'
 end
 
 group :production do

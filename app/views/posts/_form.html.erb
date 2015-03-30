@@ -1,0 +1,11 @@
+<div class="form">
+	<%= form_for @post do |f| %>
+	 <div class="form-group">
+	  <div class="label">
+	  <%= f.label :content %>
+	 </div>
+	  <%= f.text_area :content, :cols => "100", :rows => "10" %>
+	 </div>
+	  <%= f.submit %>
+	<% end %>
+</div>
