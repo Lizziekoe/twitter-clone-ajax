@@ -1,8 +1,10 @@
 <h3>Welcome to Twitter for Non-Twitter Users!</h3>
 
-  <%= link_to "New Tweet", new_post_path %>
+  <%= link_to "New Tweet", new_post_path, id: "newTweet", remote: true %>
 
+<div id="tweetList">
 
   <%= render @posts %>
+</div>
 
   <%= will_paginate @posts %>
